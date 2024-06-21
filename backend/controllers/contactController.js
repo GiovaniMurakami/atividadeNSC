@@ -13,7 +13,7 @@ class contactController {
 
             if (err) return res.status(status).json({ status, msg });
 
-            res.status(status).json({ msg });
+            res.status(status).json({ status, msg });
         } catch (err) {
             res.status(500).json({
                 msg: "Error, try again later",
