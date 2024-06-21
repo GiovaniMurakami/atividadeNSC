@@ -20,7 +20,7 @@ async function execute({ name, email, message }) {
         return {
             err: true,
             status: err.status || 500,
-            msg: err.msg || "Unknown error, try again later",
+            msg: err.message || "Unknown error, try again later",
         };
     }
 }
@@ -56,7 +56,8 @@ function validade({ name, email, message }) {
     //Validação tamanho mensagem
     if (message.length < 10) {
         throw new StatusErr(
-            "O campo 'mensagem' deve conter pelo menos 10 caracteres"
+            "O campo 'mensagem' deve conter pelo menos 10 caracteres",
+            400
         );
     }
 }
