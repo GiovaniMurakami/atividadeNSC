@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atividaded NSC</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/mediaqueries.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>Formulário de Contato</header>
+            <form action="">
+                <div class="name-email-container">
+                    <div class="field name">
+                        <div class="input-area">
+                            <input
+                                type="name"
+                                name="name"
+                                placeholder="Ana Maria de Lurdes"
+                            />
+                            <i class="icon fas fa-grin-beam"></i>
+                            <i
+                                class="error error-icon fas fa-exclamation-circle"
+                            ></i>
+                        </div>
+                        <div class="error error-text">
+                            Nome não pode ser vazio
+                        </div>
+                    </div>
+
+                    <div class="field email">
+                        <div class="input-area">
+                            <input
+                                type="text"
+                                name="email"
+                                placeholder="ana.maria@email.com"
+                            />
+                            <i class="icon fas fa-envelope"></i>
+                            <i
+                                class="error error-icon fas fa-exclamation-circle"
+                            ></i>
+                        </div>
+                        <div class="error error-text">
+                            Email não pode ser vazio
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field message">
+                    <div class="input-area">
+                        <input
+                            class="input-message"
+                            name="message"
+                            type="text"
+                            placeholder="Adorei o serviço prestado"
+                        ></input>
+                        <i class="icon fas fa-comment"></i>
+                        <i
+                            class="error error-icon fas fa-exclamation-circle"
+                        ></i>
+                    </div>
+                    <div class="error error-text">
+                        Mensagem não pode ser vazia
+                    </div>
+                </div>
+                <input type="submit" value="Enviar" />
+            </form>
+        </div>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
