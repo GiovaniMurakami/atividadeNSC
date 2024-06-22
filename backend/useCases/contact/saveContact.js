@@ -4,9 +4,9 @@ const Contact = require("../../models/contactSchema");
 
 async function execute({ name, email, message }) {
     try {
-        validade({ name, email, message });
+        validateNameEmailMessage({ name, email, message });
 
-        const reqContact = createContact({ name, email, message });
+        const reqContact = createContact(sanitizeEntries(name, email, message));
 
         await reqContact.save();
 
@@ -25,7 +25,7 @@ async function execute({ name, email, message }) {
     }
 }
 
-function validade({ name, email, message }) {
+function validateNameEmailMessage({ name, email, message }) {
     //Validação se campo existe
     if (!name || !email || !message) {
         throw new StatusErr("Todos os campos são obrigatórios", 400);
@@ -69,6 +69,18 @@ function createContact({ name, email, message }) {
         message,
     });
     return contact;
+}
+
+function sanitizeEntries(name, email, message) {
+    const normalizeName = name.trim().toUpperCase();
+    const normalizeEmail = email.trim().toLowerCase();
+    const normalizeMessage = message.trim();
+
+    return {
+        name: normalizeName,
+        email: normalizeEmail,
+        message: normalizeMessage,
+    };
 }
 
 module.exports = { execute };
