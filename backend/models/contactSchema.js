@@ -1,6 +1,15 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+/**
+ * Esquema Mongoose para criar um modelo de Contato
+ * @typedef {Object} Contact
+ * @property {string} name - Nome do usuário.
+ * @property {string} email - Email do usuário.
+ * @property {string} message - Mensagem do usuário.
+ * @property {Date} createdAt - Data de quando o formulário foi enviado(criado automaticamente).
+ * @property {Date} updatedAt - Data da última atualização do contato(criado e atualizado automaticamente).
+ */
 const ContactSchema = new Schema(
     {
         name: {
@@ -21,6 +30,10 @@ const ContactSchema = new Schema(
     { timestamps: true }
 );
 
+/**
+ * Modelo Mongoose para o esquema de contatos.
+ * @type {Model<Contact>}
+ */
 const Contact = mongoose.model("Contact", ContactSchema, "contacts");
 
 module.exports = Contact;
