@@ -1,14 +1,39 @@
-@media only screen and (max-width: 590px) and (max-height: 1000px) {
-    .name-email-container{
+@media only screen and (max-width: 700px) and (max-height: 1000px) {
+    .name-email-container {
         flex-direction: column;
         gap: 0;
     }
 
-    .wrapper{
+    .wrapper {
         width: 95%;
+        max-height: 90%;
+    }
+
+    form input[type="submit"] {
+        width: 70%;
+        margin-bottom: 0px;
+    }
+
+    .wrapper header {
+        font-size: 25px;
+    }
+
+    form .field .error-text {
+        font-size: 14px;
     }
 }
 
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
+    .wrapper {
+        height: 100%;
+        width: 95%;
+    }
 
+    .wrapper header {
+        font-size: 25px;
+    }
+
+    .wrapper form {
+        margin: 10px;
+    }
 }
