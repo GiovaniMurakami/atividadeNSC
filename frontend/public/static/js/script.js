@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nameField = form.querySelector(".name");
     const nameInput = nameField.querySelector("input");
     const messageField = form.querySelector(".message");
-    const messageInput = messageField.querySelector("input");
+    const messageInput = messageField.querySelector("textarea");
 
     nameInput.onkeyup = () => {
         if (nameInput.value == "") {
