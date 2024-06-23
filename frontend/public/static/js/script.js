@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             errorText.innerText =
                 messageInput.value != ""
                     ? "Mensagem precisa ter pelo menos 10 caracteres"
-                    : "Nome não pode ser vazio";
+                    : "Mensagem não pode ser vazia";
         }
     }
 
