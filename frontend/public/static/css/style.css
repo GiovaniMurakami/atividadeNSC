@@ -74,15 +74,24 @@ form input {
 }
 
 .input-message {
+    position: relative;
     width: 100%;
+    padding: calc((100px - 1.2em) / 2);
+    padding-left: 45px;
+    padding-right: 45px;
     height: 100px;
-    padding: 39px 45px;
     font-size: 18px;
     border-radius: 5px;
     overflow-y: hidden;
     outline: none;
     resize: none;
     border: 1px solid #bfbfbf;
+}
+
+textarea::placeholder {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
 }
 
 form .field.error input,
