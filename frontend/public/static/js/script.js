@@ -15,14 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    messageInput.onkeyup = () => {
-        if (messageInput.value == "") {
-            messageField.classList.add("error");
-        } else {
-            messageField.classList.remove("error");
-        }
-    };
-
     form.onsubmit = (e) => {
         e.preventDefault();
         checkEmail();
