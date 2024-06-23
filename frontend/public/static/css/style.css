@@ -30,18 +30,21 @@ form .field {
     width: 100%;
 }
 
-form .field.shake{
+form .field.shake {
     animation: shake 0.3s ease-in-out;
 }
 
 @keyframes shake {
-    0%, 100%{
+    0%,
+    100% {
         margin-left: 0;
     }
-    20%, 80%{
+    20%,
+    80% {
         margin-left: -12px;
     }
-    40%, 60%{
+    40%,
+    60% {
         margin-left: 12px;
     }
 }
@@ -59,7 +62,7 @@ form .field .input-area {
     gap: 2vh;
 }
 
-form input{
+form input {
     height: 50px;
     width: 100%;
     padding: 0 45px;
@@ -73,15 +76,17 @@ form input{
 .input-message {
     width: 100%;
     height: 100px;
-    padding: 13px 45px;
+    padding: 39px 45px;
     font-size: 18px;
     border-radius: 5px;
+    overflow-y: hidden;
     outline: none;
     resize: none;
     border: 1px solid #bfbfbf;
 }
 
-form .field.error input, form .field.error textarea {
+form .field.error input,
+form .field.error textarea {
     border-color: #dc3545;
 }
 
@@ -90,7 +95,7 @@ form input::placeholder {
     font-size: 17px;
 }
 
-form .field i{
+form .field i {
     position: absolute;
     top: 50%;
     font-size: 18px;
@@ -101,7 +106,6 @@ form .field i{
 form .field .icon {
     left: 15px;
     color: #bfbfbf;
-
 }
 
 form .field .error-icon {
