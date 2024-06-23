@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    messageInput.onkeyup = () => {
+        if (messageInput.value == "") {
+            messageField.classList.add("error");
+        } else {
+            messageField.classList.remove("error");
+        }
+    };
+
     form.onsubmit = (e) => {
         e.preventDefault();
         checkEmail();
@@ -76,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function submitForm(name, email, message) {
-        console.log(name, email, message);
         try {
             const response = await fetch(
                 "http://localhost:3000/api/contact/submit",
@@ -95,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const data = await response.json();
             console.log("Resposta da API:", data);
-
+            window.location.href = "/sucess";
             nameInput.value = "";
             emailInput.value = "";
             messageInput.value = "";
